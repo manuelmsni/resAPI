@@ -2,15 +2,15 @@
 
 $_SERVER['REQUEST_URI'];
 //explode es como un split
-$routesarray = explode("/",$_SERVER['REQUEST_URI']);
+$routesArray = explode("/",$_SERVER['REQUEST_URI']);
 //limpia las entradasvacías
-$routesarray = array_filter($routesarray);
+$routesArray = array_filter($routesArray);
 
 //imprime el array
 //echo '<pre>'; print_r($routesarray); echo '</pre>';
 
 // Si el array está vacío, devuelve not found (cuando no se hace ninguna petición a la api)
-if(empty($routesarray)){
+if(empty($routesArray)){
 
     $json = array(
         'status' => 404,
@@ -29,15 +29,14 @@ $method = $_SERVER['REQUEST_METHOD'];
 if(isset($method)){
 
     // Comprueba si hay un solo parámetro
-    if(count($routesarray) == 1){ 
+    if(count($routesArray) == 1){ 
 
         // Comprueba el tipo de método
         if($method == "GET"){
 
-            $json = array(
-                'status' => 200,
-                'result' => 'Solicitud GET'
-            );
+           include "services/get.php";
+
+           return;
 
         } elseif($method == "POST"){
 

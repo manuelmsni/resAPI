@@ -1,2 +1,78 @@
 [06-Jun-2023 13:49:39 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\resAPI\routes\routes.php on line 9
 [06-Jun-2023 14:08:45 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "{" in C:\xampp\htdocs\resAPI\routes\routes.php on line 29
+[06-Jun-2023 16:36:40 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "class" in C:\xampp\htdocs\resAPI\models\get.model.php on line 5
+[06-Jun-2023 16:38:12 Europe/Berlin] PHP Warning:  require_once(connextion.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\resAPI\models\get.model.php on line 3
+[06-Jun-2023 16:38:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'connextion.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\resAPI\models\get.model.php:3
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\controllers\get.controller.php(3): require_once()
+#1 C:\xampp\htdocs\resAPI\routes\services\get.php(3): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 3
+[06-Jun-2023 16:38:30 Europe/Berlin] PHP Warning:  Undefined variable $routesArray in C:\xampp\htdocs\resAPI\routes\services\get.php on line 5
+[06-Jun-2023 16:38:30 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\resAPI\routes\services\get.php on line 5
+[06-Jun-2023 16:38:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function GetController() in C:\xampp\htdocs\resAPI\routes\services\get.php:7
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\routes\routes.php(37): include()
+#1 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\resAPI\routes\services\get.php on line 7
+[06-Jun-2023 16:39:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function GetController() in C:\xampp\htdocs\resAPI\routes\services\get.php:7
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\routes\routes.php(37): include()
+#1 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\resAPI\routes\services\get.php on line 7
+[06-Jun-2023 16:40:22 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'manuelmsni.per' doesn't exist in C:\xampp\htdocs\resAPI\models\get.model.php:13
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(13): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(9): GetModel::getData('per')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(7): GetController::getData('per')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 13
+[06-Jun-2023 16:40:33 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'manuelmsni.usu' doesn't exist in C:\xampp\htdocs\resAPI\models\get.model.php:13
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(13): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(9): GetModel::getData('usu')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(7): GetController::getData('usu')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 13
+[06-Jun-2023 16:41:05 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'tfm.usu' doesn't exist in C:\xampp\htdocs\resAPI\models\get.model.php:13
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(13): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(9): GetModel::getData('usu')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(7): GetController::getData('usu')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 13
+[06-Jun-2023 17:03:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GetControler" not found in C:\xampp\htdocs\resAPI\controllers\get.controller.php:11
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\routes\services\get.php(9): GetController::getData('per')
+#1 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\resAPI\controllers\get.controller.php on line 11
+[06-Jun-2023 17:05:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GetControler" not found in C:\xampp\htdocs\resAPI\controllers\get.controller.php:11
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\routes\services\get.php(9): GetController::getData('per')
+#1 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\resAPI\controllers\get.controller.php on line 11
+[06-Jun-2023 17:05:47 Europe/Berlin] PHP Warning:  Undefined variable $json in C:\xampp\htdocs\resAPI\routes\routes.php on line 66
+[06-Jun-2023 17:05:47 Europe/Berlin] PHP Warning:  Undefined variable $json in C:\xampp\htdocs\resAPI\routes\routes.php on line 66
+[06-Jun-2023 17:05:47 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\resAPI\routes\routes.php on line 66
