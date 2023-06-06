@@ -1,0 +1,1 @@
+[06-Jun-2023 13:49:39 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\resAPI\routes\routes.php on line 9
