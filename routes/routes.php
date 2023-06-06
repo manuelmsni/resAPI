@@ -9,7 +9,7 @@ $routesarray = array_filter($routesarray);
 //imprime el array
 //echo '<pre>'; print_r($routesarray); echo '</pre>';
 
-// Si el array está vacío, devuelve not found
+// Si el array está vacío, devuelve not found (cuando no se hace ninguna petición a la api)
 if(empty($routesarray)){
 
     $json = array(
@@ -22,14 +22,56 @@ if(empty($routesarray)){
     return;
 }
 
+// Averigua si es una petición GET / POST / PUT / DELETE
+$method = $_SERVER['REQUEST_METHOD'];
 
-$json = array(
-    'status' => 200,
-    'result' => 'success'
-);
+// Comprueba si existe un método http
+if(isset($method)){
 
-echo json_encode($json);
+    // Comprueba si hay un solo parámetro
+    if(count($routesarray) == 1){ 
 
+        // Comprueba el tipo de método
+        if($method == "GET"){
 
+            $json = array(
+                'status' => 200,
+                'result' => 'Solicitud GET'
+            );
+
+        } elseif($method == "POST"){
+
+            $json = array(
+                'status' => 200,
+                'result' => 'Solicitud POST'
+            );
+
+        } elseif($method == "PUT"){
+
+            $json = array(
+                'status' => 200,
+                'result' => 'Solicitud PUT'
+            );
+
+        } elseif($method == "DELETE"){
+
+            $json = array(
+                'status' => 200,
+                'result' => 'Solicitud DELETE'
+            );
+
+        } else {
+
+            return;
+
+        }
+
+        echo json_encode($json, http_response_code($json["status"]));
+
+    }
+
+}
+
+return;
 
 ?>
