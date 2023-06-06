@@ -364,3 +364,13 @@ Stack trace:
   thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 72
 [06-Jun-2023 21:33:21 Europe/Berlin] PHP Warning:  Undefined array key "field" in C:\xampp\htdocs\resAPI\routes\services\get.php on line 15
 [06-Jun-2023 21:33:21 Europe/Berlin] PHP Warning:  Undefined array key "is" in C:\xampp\htdocs\resAPI\routes\services\get.php on line 16
+[06-Jun-2023 21:36:05 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'asi' in 'where clause' in C:\xampp\htdocs\resAPI\models\get.model.php:78
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(78): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod\xC2\xB7S\xC2\xB7asi', '1\xC2\xB7S\xC2\xB7qw')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(22): GetController::getDataWhere('cur', 'cod,ali', 'cod\xC2\xB7S\xC2\xB7asi', '1\xC2\xB7S\xC2\xB7qw')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 78

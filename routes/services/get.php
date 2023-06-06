@@ -17,13 +17,21 @@ $iss = $_GET["is"];
 
 $response = new GetController();
 
-if(!empty($fields) && !empty($iss)){ // Si hay WHERE
+try{
 
-    $response -> getDataWhere($table, $select, $fields, $iss);
+    if(!empty($fields) && !empty($iss)){ // Si hay WHERE
 
-} else { // Si no hay WHERE
+        $response -> getDataWhere($table, $select, $fields, $iss);
 
-    $response -> getData($table, $select);
+    } else { // Si no hay WHERE
+
+        $response -> getData($table, $select);
+
+    }
+
+} catch(PDOException $e){
+
+    die("Error: ".$e->getMessage());
 
 }
 
