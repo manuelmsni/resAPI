@@ -76,3 +76,291 @@ Stack trace:
 [06-Jun-2023 17:05:47 Europe/Berlin] PHP Warning:  Undefined variable $json in C:\xampp\htdocs\resAPI\routes\routes.php on line 66
 [06-Jun-2023 17:05:47 Europe/Berlin] PHP Warning:  Undefined variable $json in C:\xampp\htdocs\resAPI\routes\routes.php on line 66
 [06-Jun-2023 17:05:47 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\resAPI\routes\routes.php on line 66
+[06-Jun-2023 17:34:18 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function GetModel::getData(), 1 passed in C:\xampp\htdocs\resAPI\controllers\get.controller.php on line 9 and exactly 2 expected in C:\xampp\htdocs\resAPI\models\get.model.php:7
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\controllers\get.controller.php(9): GetModel::getData('cur')
+#1 C:\xampp\htdocs\resAPI\routes\services\get.php(11): GetController::getData('cur', '*')
+#2 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 7
+[06-Jun-2023 17:34:42 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function GetModel::getData(), 1 passed in C:\xampp\htdocs\resAPI\controllers\get.controller.php on line 9 and exactly 2 expected in C:\xampp\htdocs\resAPI\models\get.model.php:7
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\controllers\get.controller.php(9): GetModel::getData('cur')
+#1 C:\xampp\htdocs\resAPI\routes\services\get.php(11): GetController::getData('cur', '*')
+#2 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 7
+[06-Jun-2023 17:34:43 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function GetModel::getData(), 1 passed in C:\xampp\htdocs\resAPI\controllers\get.controller.php on line 9 and exactly 2 expected in C:\xampp\htdocs\resAPI\models\get.model.php:7
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\controllers\get.controller.php(9): GetModel::getData('cur')
+#1 C:\xampp\htdocs\resAPI\routes\services\get.php(11): GetController::getData('cur', '*')
+#2 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 7
+[06-Jun-2023 17:38:46 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?select=*' at line 1 in C:\xampp\htdocs\resAPI\models\get.model.php:13
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(13): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(9): GetModel::getData('cur?select=*', '*')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(11): GetController::getData('cur?select=*', '*')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 13
+[06-Jun-2023 17:40:30 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?select=*' at line 1 in C:\xampp\htdocs\resAPI\models\get.model.php:13
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(13): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(9): GetModel::getData('cur?select=*', '*')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(11): GetController::getData('cur?select=*', '*')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 13
+[06-Jun-2023 18:11:25 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function GetModel::getDataWhere(), 2 passed in C:\xampp\htdocs\resAPI\controllers\get.controller.php on line 27 and exactly 4 expected in C:\xampp\htdocs\resAPI\models\get.model.php:28
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali')
+#1 C:\xampp\htdocs\resAPI\routes\services\get.php(20): GetController::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#2 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 28
+[06-Jun-2023 18:41:45 Europe/Berlin] PHP Warning:  Undefined variable $cfs in C:\xampp\htdocs\resAPI\models\get.model.php on line 38
+[06-Jun-2023 18:41:45 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\resAPI\models\get.model.php:55
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(55): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(20): GetController::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 55
+[06-Jun-2023 18:42:02 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\resAPI\models\get.model.php:55
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(55): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(20): GetController::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 55
+[06-Jun-2023 20:01:39 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\resAPI\models\get.model.php:55
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(55): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(20): GetController::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 55
+[06-Jun-2023 20:02:26 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\resAPI\models\get.model.php:57
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(57): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(20): GetController::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 57
+[06-Jun-2023 20:06:02 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\resAPI\models\get.model.php:55
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(55): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod%S%cod', '1%S%1')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(20): GetController::getDataWhere('cur', 'cod,ali', 'cod%S%cod', '1%S%1')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 55
+[06-Jun-2023 20:06:23 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\resAPI\models\get.model.php:55
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(55): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod%S%ali', '1%S%1')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(20): GetController::getDataWhere('cur', 'cod,ali', 'cod%S%ali', '1%S%1')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 55
+[06-Jun-2023 20:07:59 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\resAPI\models\get.model.php:55
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(55): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod%S%ali', '1%S%1')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(20): GetController::getDataWhere('cur', 'cod,ali', 'cod%S%ali', '1%S%1')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 55
+[06-Jun-2023 20:16:52 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, int given in C:\xampp\htdocs\resAPI\models\get.model.php on line 53
+[06-Jun-2023 20:16:52 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':cod AND ali = :ali' at line 1 in C:\xampp\htdocs\resAPI\models\get.model.php:59
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(59): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod%S%ali', '1%S%1')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(20): GetController::getDataWhere('cur', 'cod,ali', 'cod%S%ali', '1%S%1')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 59
+[06-Jun-2023 20:17:58 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\resAPI\models\get.model.php:59
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(59): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(20): GetController::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 59
+[06-Jun-2023 20:19:15 Europe/Berlin] PHP Warning:  Undefined variable $sql in C:\xampp\htdocs\resAPI\models\get.model.php on line 52
+[06-Jun-2023 20:19:15 Europe/Berlin] PHP Fatal error:  Uncaught ValueError: PDO::prepare(): Argument #1 ($query) cannot be empty in C:\xampp\htdocs\resAPI\models\get.model.php:52
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(52): PDO->prepare('')
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(20): GetController::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 52
+[06-Jun-2023 20:19:44 Europe/Berlin] PHP Warning:  Undefined variable $buffer in C:\xampp\htdocs\resAPI\models\get.model.php on line 51
+[06-Jun-2023 20:19:44 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in C:\xampp\htdocs\resAPI\models\get.model.php:63
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(63): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(20): GetController::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 63
+[06-Jun-2023 20:20:02 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in C:\xampp\htdocs\resAPI\models\get.model.php:63
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(63): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(20): GetController::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 63
+[06-Jun-2023 20:21:49 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of class PDOStatement could not be converted to string in C:\xampp\htdocs\resAPI\models\get.model.php:63
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#1 C:\xampp\htdocs\resAPI\routes\services\get.php(20): GetController::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#2 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 63
+[06-Jun-2023 20:22:36 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of class PDOStatement could not be converted to string in C:\xampp\htdocs\resAPI\models\get.model.php:63
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#1 C:\xampp\htdocs\resAPI\routes\services\get.php(20): GetController::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#2 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 63
+[06-Jun-2023 20:34:51 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in C:\xampp\htdocs\resAPI\models\get.model.php:63
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(63): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(20): GetController::getDataWhere('cur', 'cod,ali', 'cod', '1')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 63
+[06-Jun-2023 20:35:33 Europe/Berlin] PHP Warning:  Undefined variable $f in C:\xampp\htdocs\resAPI\models\get.model.php on line 44
+[06-Jun-2023 20:53:09 Europe/Berlin] PHP Warning:  Undefined array key "field" in C:\xampp\htdocs\resAPI\routes\services\get.php on line 12
+[06-Jun-2023 20:53:09 Europe/Berlin] PHP Warning:  Undefined array key "is" in C:\xampp\htdocs\resAPI\routes\services\get.php on line 13
+[06-Jun-2023 20:54:40 Europe/Berlin] PHP Warning:  Undefined array key "field" in C:\xampp\htdocs\resAPI\routes\services\get.php on line 12
+[06-Jun-2023 20:54:40 Europe/Berlin] PHP Warning:  Undefined array key "is" in C:\xampp\htdocs\resAPI\routes\services\get.php on line 13
+[06-Jun-2023 20:56:01 Europe/Berlin] PHP Warning:  Undefined array key "field" in C:\xampp\htdocs\resAPI\routes\services\get.php on line 12
+[06-Jun-2023 20:56:01 Europe/Berlin] PHP Warning:  Undefined array key "is" in C:\xampp\htdocs\resAPI\routes\services\get.php on line 13
+[06-Jun-2023 20:58:17 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SO' at line 1 in C:\xampp\htdocs\resAPI\models\get.model.php:61
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(61): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod%s%ali', '1%s\x1ESO')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(20): GetController::getDataWhere('cur', 'cod,ali', 'cod%s%ali', '1%s\x1ESO')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 61
+[06-Jun-2023 21:17:55 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\resAPI\models\get.model.php on line 44
+[06-Jun-2023 21:19:53 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column '1ESO' in 'where clause' in C:\xampp\htdocs\resAPI\models\get.model.php:67
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(67): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod\xC2\xB7S\xC2\xB7ali', '1\xC2\xB7S\xC2\xB71ESO')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(22): GetController::getDataWhere('cur', 'cod,ali', 'cod\xC2\xB7S\xC2\xB7ali', '1\xC2\xB7S\xC2\xB71ESO')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 67
+[06-Jun-2023 21:22:39 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column '1ESO' in 'where clause' in C:\xampp\htdocs\resAPI\models\get.model.php:70
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(70): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod\xC2\xB7S\xC2\xB7ali', '1\xC2\xB7S\xC2\xB71ESO')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(22): GetController::getDataWhere('cur', 'cod,ali', 'cod\xC2\xB7S\xC2\xB7ali', '1\xC2\xB7S\xC2\xB71ESO')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 70
+[06-Jun-2023 21:24:32 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column '1ESO' in 'where clause' in C:\xampp\htdocs\resAPI\models\get.model.php:70
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(70): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod\xC2\xB7S\xC2\xB7ali', '1\xC2\xB7S\xC2\xB71ESO')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(22): GetController::getDataWhere('cur', 'cod,ali', 'cod\xC2\xB7S\xC2\xB7ali', '1\xC2\xB7S\xC2\xB71ESO')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 70
+[06-Jun-2023 21:26:10 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':cod AND ali = :ali' at line 1 in C:\xampp\htdocs\resAPI\models\get.model.php:68
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\models\get.model.php(68): PDOStatement->execute()
+#1 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod\xC2\xB7S\xC2\xB7ali', '1\xC2\xB7S\xC2\xB71ESO')
+#2 C:\xampp\htdocs\resAPI\routes\services\get.php(22): GetController::getDataWhere('cur', 'cod,ali', 'cod\xC2\xB7S\xC2\xB7ali', '1\xC2\xB7S\xC2\xB71ESO')
+#3 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 68
+[06-Jun-2023 21:31:14 Europe/Berlin] PHP Warning:  Undefined variable $statement in C:\xampp\htdocs\resAPI\models\get.model.php on line 72
+[06-Jun-2023 21:31:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function bindParam() on null in C:\xampp\htdocs\resAPI\models\get.model.php:72
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod\xC2\xB7S\xC2\xB7ali', '1\xC2\xB7S\xC2\xB71ESO')
+#1 C:\xampp\htdocs\resAPI\routes\services\get.php(22): GetController::getDataWhere('cur', 'cod,ali', 'cod\xC2\xB7S\xC2\xB7ali', '1\xC2\xB7S\xC2\xB71ESO')
+#2 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 72
+[06-Jun-2023 21:32:46 Europe/Berlin] PHP Warning:  Undefined variable $statement in C:\xampp\htdocs\resAPI\models\get.model.php on line 72
+[06-Jun-2023 21:32:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function bindParam() on null in C:\xampp\htdocs\resAPI\models\get.model.php:72
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\controllers\get.controller.php(27): GetModel::getDataWhere('cur', 'cod,ali', 'cod\xC2\xB7S\xC2\xB7ali', '1\xC2\xB7S\xC2\xB71ESO')
+#1 C:\xampp\htdocs\resAPI\routes\services\get.php(22): GetController::getDataWhere('cur', 'cod,ali', 'cod\xC2\xB7S\xC2\xB7ali', '1\xC2\xB7S\xC2\xB71ESO')
+#2 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 72
+[06-Jun-2023 21:33:21 Europe/Berlin] PHP Warning:  Undefined array key "field" in C:\xampp\htdocs\resAPI\routes\services\get.php on line 15
+[06-Jun-2023 21:33:21 Europe/Berlin] PHP Warning:  Undefined array key "is" in C:\xampp\htdocs\resAPI\routes\services\get.php on line 16

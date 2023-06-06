@@ -4,11 +4,31 @@ require_once "models/get.model.php";
 
 class GetController{
 
-    static public function getData($table){
+    /*
+     * Peticiones get sin WHERE (field, is)
+     * * * * * * * * * * * * * * * * * * * */
 
-        $response = GetModel::getData($table);
+    static public function getData($table, $select){
+
+        $response = GetModel::getData($table, $select);
 
         $return = new GetController();
+
+        $return -> fncResponse($response);
+
+    }
+
+    /*
+     * Peticiones get con WHERE (field, is)
+     * * * * * * * * * * * * * * * * * * * */
+
+     static public function getDataWhere($table, $select, $field, $is){
+
+        $response = GetModel::getDataWhere($table, $select, $field, $is);
+
+        $return = new GetController();
+
+        //return;
 
         $return -> fncResponse($response);
 
