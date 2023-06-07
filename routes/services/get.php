@@ -6,6 +6,7 @@ $response = new GetController();
 
 
 $hasAccess = true; // Implementar un método que compruebe si el usuario tiene permisos para la consulta
+
 if(!$hasAccess){
 
     $response -> notFound("Access denied");

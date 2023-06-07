@@ -409,3 +409,58 @@ Stack trace:
 #4 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
 #5 {main}
   thrown in C:\xampp\htdocs\resAPI\controllers\get.controller.php on line 48
+[07-Jun-2023 17:03:26 Europe/Berlin] PHP Warning:  require_once(controllers/source.controller.php.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\resAPI\index.php on line 19
+[07-Jun-2023 17:03:26 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'controllers/source.controller.php.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\resAPI\index.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\resAPI\index.php on line 19
+[07-Jun-2023 17:03:43 Europe/Berlin] PHP Warning:  require_once(controllers/source.controller.php.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\resAPI\index.php on line 19
+[07-Jun-2023 17:03:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'controllers/source.controller.php.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\resAPI\index.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\resAPI\index.php on line 19
+[07-Jun-2023 20:45:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "sqlModel" not found in C:\xampp\htdocs\resAPI\models\get.model.php:15
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\controllers\get.controller.php(25): GetModel::getData('tfm', 'cur', 'cod,ali', 'cod***ali', '1***1ESO', 'cod***DESC', 0, '')
+#1 C:\xampp\htdocs\resAPI\routes\services\get.php(59): GetController::getData('tfm', 'cur', 'cod,ali', 'cod***ali', '1***1ESO', 'cod***DESC', 0, '')
+#2 C:\xampp\htdocs\resAPI\routes\routes.php(38): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\index.php(28): RoutesController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 15
+[07-Jun-2023 20:49:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function execute() on null in C:\xampp\htdocs\resAPI\models\get.model.php:23
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\controllers\get.controller.php(25): GetModel::getData('tfm', 'cur', '*', '', '', '', 0, '')
+#1 C:\xampp\htdocs\resAPI\routes\services\get.php(59): GetController::getData('tfm', 'cur', '*', '', '', '', 0, '')
+#2 C:\xampp\htdocs\resAPI\routes\routes.php(38): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\index.php(28): RoutesController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 23
+[07-Jun-2023 20:50:26 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function execute() on null in C:\xampp\htdocs\resAPI\models\get.model.php:23
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\controllers\get.controller.php(25): GetModel::getData('tfm', 'cur', '*', '', '', '', 0, '')
+#1 C:\xampp\htdocs\resAPI\routes\services\get.php(59): GetController::getData('tfm', 'cur', '*', '', '', '', 0, '')
+#2 C:\xampp\htdocs\resAPI\routes\routes.php(38): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\index.php(28): RoutesController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 23
+[07-Jun-2023 20:50:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function execute() on null in C:\xampp\htdocs\resAPI\models\get.model.php:23
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\controllers\get.controller.php(25): GetModel::getData('tfm', 'cur', '*', '', '', '', 0, '')
+#1 C:\xampp\htdocs\resAPI\routes\services\get.php(59): GetController::getData('tfm', 'cur', '*', '', '', '', 0, '')
+#2 C:\xampp\htdocs\resAPI\routes\routes.php(38): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\index.php(28): RoutesController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 23
+[07-Jun-2023 20:52:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function execute() on null in C:\xampp\htdocs\resAPI\models\get.model.php:23
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\controllers\get.controller.php(25): GetModel::getData('tfm', 'cur', '*', '', '', '', 0, '')
+#1 C:\xampp\htdocs\resAPI\routes\services\get.php(59): GetController::getData('tfm', 'cur', '*', '', '', '', 0, '')
+#2 C:\xampp\htdocs\resAPI\routes\routes.php(38): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\index.php(28): RoutesController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\resAPI\models\get.model.php on line 23

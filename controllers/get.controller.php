@@ -12,7 +12,7 @@ class GetController{
 
         $return = new GetController();
 
-        $return -> fncResponse(404, '', $message);
+        $return -> fncResponse(404, $message);
 
     }
 
@@ -25,14 +25,13 @@ class GetController{
         $response = GetModel::getData($database, $table, $select, $field, $is, $order, $limitStartAt, $limitBringCount);
 
         $status = $response[0];
-        $querry = $response[1];
-        $response = $response[2];
+        $response = $response[1];
 
         $return = new GetController();
 
-        // return; // Detiene la respuesta para hacer pruebas
+        return; // Detiene la respuesta para hacer pruebas
 
-        $return -> fncResponse($status, $querry, $response);
+        $return -> fncResponse($status, $response);
 
     }
 
@@ -40,7 +39,7 @@ class GetController{
      * Respuestas del controlador 
      * * * * * * * * * * * * * * * */
 
-     public function fncResponse($status, $querry, $response){
+     public function fncResponse($status, $response){
 
         $count = 0;
 
@@ -51,7 +50,6 @@ class GetController{
         $json = array(
             'status' => $status,
             'size' => $count,
-            'querry' => $querry, // COMENTAR EN PRODUCCIÓN // Solo para testear
             'results' => $response
         );
 
