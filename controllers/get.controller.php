@@ -5,32 +5,33 @@ require_once "models/get.model.php";
 class GetController{
 
     /*
-     * Peticiones get sin WHERE (field, is)
-     * * * * * * * * * * * * * * * * * * * */
+     * No encontrado
+     * * * * * * * * * */
 
-    static public function getData($table, $select){
-
-        $response = GetModel::getData($table, $select);
+     static public function notFound(){
 
         $return = new GetController();
 
-        $return -> fncResponse($response);
+        $return -> fncResponse('', '');
 
-    }
+     }
 
     /*
-     * Peticiones get con WHERE (field, is)
-     * * * * * * * * * * * * * * * * * * * */
+     * Peticiones get
+     * * * * * * * * * */
 
-     static public function getDataWhere($table, $select, $field, $is){
+     static public function getData($table, $select, $field, $is, $order){
 
-        $response = GetModel::getDataWhere($table, $select, $field, $is);
+        $response = GetModel::getData($table, $select, $field, $is, $order);
+
+        $querry = $response[1];
+        $response = $response[0];
 
         $return = new GetController();
 
-        //return;
+        // return; // Detiene la respuesta para hacer pruebas
 
-        $return -> fncResponse($response);
+        $return -> fncResponse($response, $querry);
 
     }
 
@@ -38,13 +39,14 @@ class GetController{
      * Respuestas del controlador 
      * * * * * * * * * * * * * * * */
 
-     public function fncResponse($response){
+     public function fncResponse($response, $querry){
 
         if(!empty($response)){
 
             $json = array(
                 'status' => 200,
                 'size' => count($response),
+                'querry' => $querry,
                 'results' => $response
             );
 
@@ -52,6 +54,7 @@ class GetController{
 
             $json = array(
                 'status' => 404,
+                'querry' => $querry,
                 'results' => 'Not Found'
             );
 
