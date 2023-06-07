@@ -8,10 +8,21 @@ class GetModel{
      * Peticiones get con WHERE (field, is)
      * * * * * * * * * * * * * * * * * * * */
 
-     static public function getData($table, $select, $field, $is, $order){
+     static public function getData($database, $table, $select, $field, $is, $order, $limitStartAt, $limitBringCount){
 
         $sql = "SELECT $select FROM $table";
         $querry = $sql;
+        $limit = "";
+
+        if(!empty($limitBringCount)){
+            $limit = " LIMIT ";
+
+            if($limitStartAt != 0){
+                $limit.=$limitStartAt.", ";
+            }
+
+            $limit.= $limitBringCount;
+        }
 
         $separator = "***";
         $escapedSeparator = preg_quote($separator, '/');
@@ -68,9 +79,9 @@ class GetModel{
             // Si no cumple el formato y no contiene separador
             if (!$orderFormat && !$hasSeparator) {
 
-                $querry .= " ORDER BY $order";
+                $querry .= " ORDER BY $order".$limit;
 
-                return array('', $querry);
+                return array(404, $querry, '');
 
             }
 
@@ -79,12 +90,12 @@ class GetModel{
             $orderBy = $orderConpounds[0];
             $direction = $orderConpounds[1];
 
-            $sql .= " ORDER BY $orderBy $direction";
-            $querry .= " ORDER BY $orderBy $direction";
+            $sql .= " ORDER BY $orderBy $direction".$limit;
+            $querry .= " ORDER BY $orderBy $direction".$limit;
 
             // Si no cumple el formato y tiene separador debo salir
             if(!$orderFormat && $hasSeparator){
-                return array('', $querry);
+                return array(404, $querry, '');
             }
 
         }
@@ -92,7 +103,7 @@ class GetModel{
         // echo $sql;
         // return; // Detiene la respuesta para hacer pruebas
 
-        $statement = Connection::connect() -> prepare($sql);
+        $statement = Connection::connect($database) -> prepare($sql);
 
         if($replace){
 
@@ -109,7 +120,7 @@ class GetModel{
         // Pasando por parámetros PDO::FETCH_CLASS limpio la información de salida para que en esta no se incluyan los indices
         $result = $statement -> fetchAll(PDO::FETCH_CLASS);
 
-        return array($result, $sql);
+        return array(200, $sql, $result);
 
     }
 

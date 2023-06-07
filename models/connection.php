@@ -10,7 +10,6 @@ class Connection{
 
         $infoDB = array(
 
-            "database" => "tfm",
             "user" => "root",
             "pass" => ""
 
@@ -23,14 +22,14 @@ class Connection{
      * Conexión a la base de datos
      * * * * * * * * * * * * * * * * */
 
-    static public function connect(){
+    static public function connect($database){
 
         try{
 
             $infoDB = Connection::infoDatabase();
 
             $link = new PDO(
-                "mysql:host=localhost;dbname=".$infoDB["database"],
+                "mysql:host=localhost;dbname=".$database,
                 $infoDB["user"],
                 $infoDB["pass"]
             );

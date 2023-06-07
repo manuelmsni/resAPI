@@ -14,13 +14,14 @@ if(empty($routesArray)){
 
     $json = array(
         'status' => 404,
-        'result' => 'Not found'
+        'result' => 'Access denied'
     );
     
     echo json_encode($json, http_response_code($json["status"]));
 
     return;
 }
+
 
 // Averigua si es una petición GET / POST / PUT / DELETE
 $method = $_SERVER['REQUEST_METHOD'];

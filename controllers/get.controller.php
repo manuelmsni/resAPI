@@ -8,30 +8,31 @@ class GetController{
      * No encontrado
      * * * * * * * * * */
 
-     static public function notFound(){
+    static public function notFound($message){
 
         $return = new GetController();
 
-        $return -> fncResponse('', '');
+        $return -> fncResponse(404, '', $message);
 
-     }
+    }
 
     /*
      * Peticiones get
      * * * * * * * * * */
 
-     static public function getData($table, $select, $field, $is, $order){
+     static public function getData($database, $table, $select, $field, $is, $order, $limitStartAt, $limitBringCount){
 
-        $response = GetModel::getData($table, $select, $field, $is, $order);
+        $response = GetModel::getData($database, $table, $select, $field, $is, $order, $limitStartAt, $limitBringCount);
 
+        $status = $response[0];
         $querry = $response[1];
-        $response = $response[0];
+        $response = $response[2];
 
         $return = new GetController();
 
         // return; // Detiene la respuesta para hacer pruebas
 
-        $return -> fncResponse($response, $querry);
+        $return -> fncResponse($status, $querry, $response);
 
     }
 
@@ -39,26 +40,20 @@ class GetController{
      * Respuestas del controlador 
      * * * * * * * * * * * * * * * */
 
-     public function fncResponse($response, $querry){
+     public function fncResponse($status, $querry, $response){
 
-        if(!empty($response)){
+        $count = 0;
 
-            $json = array(
-                'status' => 200,
-                'size' => count($response),
-                'querry' => $querry,
-                'results' => $response
-            );
-
-        } else {
-
-            $json = array(
-                'status' => 404,
-                'querry' => $querry,
-                'results' => 'Not Found'
-            );
-
+        if(is_countable($response)){
+            $count = count($response);
         }
+
+        $json = array(
+            'status' => $status,
+            'size' => $count,
+            'querry' => $querry, // COMENTAR EN PRODUCCIÓN // Solo para testear
+            'results' => $response
+        );
 
         echo json_encode($json, http_response_code($json["status"]));
 

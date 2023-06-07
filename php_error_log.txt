@@ -400,3 +400,12 @@ Stack trace:
 [07-Jun-2023 13:00:03 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\resAPI\controllers\get.controller.php on line 28
 [07-Jun-2023 13:00:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\resAPI\controllers\get.controller.php on line 27
 [07-Jun-2023 13:00:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\resAPI\controllers\get.controller.php on line 28
+[07-Jun-2023 14:03:40 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in C:\xampp\htdocs\resAPI\controllers\get.controller.php:48
+Stack trace:
+#0 C:\xampp\htdocs\resAPI\controllers\get.controller.php(15): GetController->fncResponse('Access denied', '')
+#1 C:\xampp\htdocs\resAPI\routes\services\get.php(17): GetController::notFound('Access denied')
+#2 C:\xampp\htdocs\resAPI\routes\routes.php(37): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\resAPI\controllers\routes.controller.php(9): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\resAPI\index.php(21): RoutesController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\resAPI\controllers\get.controller.php on line 48
