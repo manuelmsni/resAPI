@@ -21,6 +21,9 @@ $data = explode("?", $routesArray[1]);
 // Almacena el nombre de la base de datos
 $database = $data[0];
 
+//Lenguaje de la base de datos
+$languaje = 'sql';
+
 // Almacena el valor de la tabla
 $table = $_GET["table"] ?? "";
 
@@ -56,7 +59,7 @@ try{
 
     } else { // Si no hay errores de sintaxis
 
-        $response -> getData($database, $table, $select, $fields, $iss, $order, $limitStartAt, $limitBringCount);
+        $response -> getData($database, $languaje, $table, $select, $fields, $iss, $order, $limitStartAt, $limitBringCount);
 
     }
 

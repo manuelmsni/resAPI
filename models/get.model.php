@@ -2,23 +2,13 @@
 
 require_once "connection.php";
 
-require_once "sql.model.php";
-
 class GetModel{
 
     /*
      * Peticiones get con WHERE (field, is)
      * * * * * * * * * * * * * * * * * * * */
 
-     static public function getData($database, $table, $select, $field, $is, $order, $limitStartAt, $limitBringCount){
-
-        $queryLanguage = "SQL"; // Buscar en la configuración
-
-        if($queryLanguage == "SQL"){
-
-            $statement = sqlModel::query($database, $table, $select, $field, $is, $order, $limitStartAt, $limitBringCount);
-
-        }
+     static public function getData($statement){
 
         $statement -> execute();
 

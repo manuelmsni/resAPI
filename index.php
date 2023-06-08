@@ -16,13 +16,14 @@
 
     require_once 'controllers/routes.controller.php';
 
-/*
-    require_once 'controllers/source.controller.php';
-    $ip = SourceController::getRealIP();
-    $user =  $_GET["user"] ?? "";
-    $password =  $_GET["password"] ?? "";
-    $session =  $_GET["session"] ?? "";
-*/
+    require_once 'controllers/access.controller.php';
+
+    $access = new AccessController();
+
+    $access -> startSession();
+
+    
+
     $index= new RoutesController();
 
     $index -> index();

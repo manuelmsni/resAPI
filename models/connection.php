@@ -1,37 +1,19 @@
 <?php
 
 class Connection{
-    
-    /*
-     * Información de la base de datos
-     * * * * * * * * * * * * * * * * * */
-
-    static public function infoDatabase() {
-
-        $infoDB = array(
-
-            "user" => "root",
-            "pass" => ""
-
-        );
-
-        return $infoDB;
-    }
 
     /*
      * Conexión a la base de datos
      * * * * * * * * * * * * * * * * */
 
-    static public function connect($database){
+    static public function connect($host, $database, $user, $password){
 
         try{
 
-            $infoDB = Connection::infoDatabase();
-
             $link = new PDO(
-                "mysql:host=localhost;dbname=".$database,
-                $infoDB["user"],
-                $infoDB["pass"]
+                "mysql:host=".$host.";dbname=".$database,
+                $user,
+                $password
             );
 
             $link->exec("set names utf8");

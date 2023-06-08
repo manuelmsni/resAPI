@@ -1,8 +1,10 @@
 <?php
 
 $_SERVER['REQUEST_URI'];
+
 //explode es como un split
 $routesArray = explode("/",$_SERVER['REQUEST_URI']);
+
 //limpia las entradasvacías
 $routesArray = array_filter($routesArray);
 
@@ -22,6 +24,29 @@ if(empty($routesArray)){
     return;
 }
 
+// Separa los parámetros de la url
+$data = explode("?", $routesArray[1]);
+
+// Almacena el comando / nombre de la base de datos
+$command = $data[0];
+
+/*
+
+if ($command == 'config'){
+
+} else if ($command == ''){
+
+}
+
+$databases = '';
+
+$database = $databases[$command];
+
+if(!empty($database)){
+
+}
+
+*/
 
 // Averigua si es una petición GET / POST / PUT / DELETE
 $method = $_SERVER['REQUEST_METHOD'];

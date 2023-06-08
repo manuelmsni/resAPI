@@ -78,6 +78,7 @@ class sqlModel{
                 return array(404, $querry, '');
 
             }
+        
 
             $orderConpounds = explode($separator, $order);
                 
@@ -92,26 +93,25 @@ class sqlModel{
                 return array(404, $querry, '');
             }
 
-             echo $sql;
-             return; // Detiene la respuesta para hacer pruebas
+        }
 
-            $statement = Connection::connect($database) -> prepare($sql);
+        // echo $sql;
+        // return; // Detiene la respuesta para hacer pruebas
 
-            if($replace){
+        $statement = Connection::connect("localhost", $database, "root", "") -> prepare($sql);
 
-                foreach ($dictionary as $key => $value) {
+        if($replace){
 
-                    $statement -> bindParam(":".$key, $value, PDO::PARAM_STR);
-                    
-                }
+            foreach ($dictionary as $key => $value) {
 
+                $statement -> bindParam(":".$key, $value, PDO::PARAM_STR);
+                
             }
-
-            return $statement;
 
         }
 
-        
+        return $statement;
+
     }
 
 }
